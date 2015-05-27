@@ -1,0 +1,136 @@
+/*
+    Adaptive 960 Grid System
+    Licensed under MIT.
+*/
+body {
+    min-width: 960px;
+    position: relative;
+}
+.container {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+.row {
+    width: 960px;
+    margin: 10px auto;
+    display: block;
+}
+.row.no-space {
+    margin: 0 auto;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.column {
+    float: left;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    zoom: 1;
+}
+
+.container .row .column.span-1 {
+    width: 60px;
+}
+.container .row .column.span-2 {
+    width: 140px;
+}
+.container .row .column.span-3 {
+    width: 220px;
+}
+.container .row .column.span-4 {
+    width: 300px;
+}
+.container .row .column.span-5 {
+    width: 380px;
+}
+.container .row .column.span-6 {
+    width: 460px;
+}
+.container .row .column.span-7 {
+    width: 540px;
+}
+.container .row .column.span-8 {
+    width: 620px;
+}
+.container .row .column.span-9 {
+    width: 700px;
+}
+.container .row .column.span-10 {
+    width: 780px;
+}
+.container .row .column.span-11 {
+    width: 860px;
+}
+.container .row .column.span-12 {
+    width: 940px;
+}
+
+.container .row .column.postset-1 {
+    margin-right: 190px;
+}
+.container .row .column.postset-2 {
+    margin-right: 260px;
+}
+.container .row .column.postset-3 {
+    margin-right: 330px;
+}
+.container .row .column.postset-4 {
+    margin-right: 400px;
+}
+.container .row .column.postset-5 {
+    margin-right: 470px;
+}
+.container .row .column.postset-6 {
+    margin-right: 540px;
+}
+.container .row .column.postset-7 {
+    margin-right: 610px;
+}
+.container .row .column.postset-8 {
+    margin-right: 680px;
+}
+.container .row .column.postset-9 {
+    margin-right: 730px;
+}
+.container .row .column.postset-10 {
+    margin-right: 820px;
+}
+.container .row .column.postset-11 {
+    margin-right: 890px;
+}
+
+.container .row .column.preset-1 {
+    margin-left: 80px;
+}
+.container .row .column.preset-2 {
+    margin-left: 170px;
+}
+
+/* 4K + Retina Displays */
+@media only screen and (min-width: 1200px) {
+    /* 1200 */
+}
+
+/* Desktop Screen Sizes */
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    /* 960 */
+}
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    /* 720 */
+}
+
+/* Mobile Landscape Screen Sizes */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /* 480 */
+}
+
+/* Mobile Portrait Screen Sizes */
+@media only screen and (max-width: 479px) {
+    /* 320 */
+}
