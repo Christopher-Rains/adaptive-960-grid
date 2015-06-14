@@ -2,6 +2,8 @@
     Adaptive 960 Grid System
     Licensed under MIT.
 */
+
+/* General */
 body {
     min-width: 960px;
     position: relative;
@@ -10,16 +12,15 @@ body {
     width: 100%;
     margin: 10px 0;
     position: relative;
+    overflow: hidden;
 }
 .row {
     position: relative;
     width: 960px;
     margin: 10px auto;
     display: block;
+    overflow: hidden;
 }
-/* .row.no-space {
-    margin: 0 auto;
-} */
 .row:after {
     content: "";
     display: table;
@@ -34,6 +35,7 @@ body {
     zoom: 1;
 }
 
+/* Spans */
 .container .row .column.span-1 {
     width: 60px;
 }
@@ -71,6 +73,7 @@ body {
     width: 940px;
 }
 
+/* Postsets */
 .container .row .column.postset-1 {
     margin-right: 90px;
 }
@@ -105,6 +108,7 @@ body {
     margin-right: 890px;
 }
 
+/* Presets */
 .container .row .column.preset-1 {
     margin-left: 90px;
 }
@@ -137,6 +141,14 @@ body {
 }
 .container .row .column.preset-11 {
     margin-left: 890px;
+}
+
+/* Nested */
+.container .row .column.alpha {
+    margin: 0 10px 0 0;
+}
+.container .row .column.omega {
+    margin: 0 0 0 10px;
 }
 
 /* 4K + Retina Displays */
@@ -267,47 +279,8 @@ body {
     }
 }
 
-/* Tablet Screen Sizes */
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-    /* 720 */
-}
-
-/* Mobile Landscape Screen Sizes 767 */
-@media only screen and (max-width: 767px) {
-    /* Width: 320 */
-
-    /* Reset body min-width for 320 */
-    body {
-        min-width: 0;
-        width: 320px;
-    }
-
-    /* Reset row width for 320 */
-    .row {
-        width: 320px
-    }
-
-    .column {
-        margin: 0 10px;
-    }
-
-    /* Reset column widths for 320 */
-    .container .row .column.span-1,
-    .container .row .column.span-2,
-    .container .row .column.span-3,
-    .container .row .column.span-4,
-    .container .row .column.span-5,
-    .container .row .column.span-6,
-    .container .row .column.span-7,
-    .container .row .column.span-8,
-    .container .row .column.span-9,
-    .container .row .column.span-10,
-    .container .row .column.span-11,
-    .container .row .column.span-12 {
-        width: 300px;
-    }
-
-    /* Reset postsets and presets for 320 */
+@media only screen and (max-width: 959px) {
+    /* Reset postsets and presets for 320 + 720 */
     .container .row .column.postset-1,
     .container .row .column.postset-2,
     .container .row .column.postset-3,
@@ -331,5 +304,85 @@ body {
     .container .row .column.preset-10,
     .container .row .column.preset-11 {
         margin: 0 10px;
+    }
+
+    /* Reset nested columns for 320 + 720 */
+    .container .row .column.alpha,
+    .container .row .column.omega {
+        margin: 0;
+    }
+}
+
+/* Tablet Screen Sizes */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    /* 720 */
+
+    /* Reset body min-width for 720 */
+    body {
+        min-width: 0;
+        width: 720px;
+    }
+
+    /* Reset row width for 720 */
+    .row {
+        width: 720px;
+    }
+
+    /* Standardize column for 720 */
+    .column {
+        margin: 0 10px;
+    }
+
+    /* Reset column widths for 320 */
+    .container .row .column.span-1,
+    .container .row .column.span-2,
+    .container .row .column.span-3,
+    .container .row .column.span-4,
+    .container .row .column.span-5,
+    .container .row .column.span-6,
+    .container .row .column.span-7,
+    .container .row .column.span-8,
+    .container .row .column.span-9,
+    .container .row .column.span-10,
+    .container .row .column.span-11,
+    .container .row .column.span-12 {
+        width: 700px;
+    }
+}
+
+/* Mobile Landscape Screen Sizes 767 */
+@media only screen and (max-width: 767px) {
+    /* Width: 320 */
+
+    /* Reset body min-width for 320 */
+    body {
+        min-width: 0;
+        width: 320px;
+    }
+
+    /* Reset row width for 320 */
+    .row {
+        width: 320px
+    }
+
+    /* Standardize column for 320 */
+    .column {
+        margin: 0 10px;
+    }
+
+    /* Reset column widths for 320 */
+    .container .row .column.span-1,
+    .container .row .column.span-2,
+    .container .row .column.span-3,
+    .container .row .column.span-4,
+    .container .row .column.span-5,
+    .container .row .column.span-6,
+    .container .row .column.span-7,
+    .container .row .column.span-8,
+    .container .row .column.span-9,
+    .container .row .column.span-10,
+    .container .row .column.span-11,
+    .container .row .column.span-12 {
+        width: 300px;
     }
 }
