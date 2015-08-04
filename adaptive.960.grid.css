@@ -151,9 +151,15 @@ body {
     margin: 0 0 0 10px;
 }
 
+@media only print {
+    .no-print {
+        display: none !important;
+    }
+}
+
 /* 4K + Retina Displays */
 @media only screen and (min-width: 1200px) {
-    /* 1200 */
+    /* Width: 1200 */
 
     /* Reset body min-width for 1200 */
     body {
@@ -396,6 +402,7 @@ body {
 }
 
 @media only screen and (max-width: 959px) {
+
     /* Reset postsets and presets for 320 + 720 */
     .container .row .column.postset-1,
     .container .row .column.postset-2,
@@ -431,7 +438,11 @@ body {
 
 /* Tablet Screen Sizes */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    /* 720 */
+    /* Width: 720 */
+
+    .display-desktop {
+        display: none !important;
+    }
 
     /* Reset body min-width for 720 */
     body {
@@ -469,6 +480,11 @@ body {
 /* Mobile Landscape Screen Sizes 767 */
 @media only screen and (max-width: 767px) {
     /* Width: 320 */
+
+    .display-desktop,
+    .display-tablet {
+        display: none !important;
+    }
 
     /* Reset body min-width for 320 */
     body {
